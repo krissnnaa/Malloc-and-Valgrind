@@ -1,9 +1,9 @@
-krissnnaa@krissnnaa-Inspiron-5559:~$ gcc -o first -g first.c
-krissnnaa@krissnnaa-Inspiron-5559:~$ valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --num-callers=20 --track-fds=yes ./first
+krissnnaa@krissnnaa-Inspiron-5559:~/C Programming- Kwon$ gcc -o Basic_valgrind Basic_for_valgrind.c
+krissnnaa@krissnnaa-Inspiron-5559:~$ valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --num-callers=20 --track-fds=yes ./Basic_valgrind
 ==4247== Memcheck, a memory error detector
 ==4247== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
 ==4247== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==4247== Command: ./first
+==4247== Command: ./Basic_valgrind
 ==4247== 
 ==4247== 
 ==4247== FILE DESCRIPTORS: 3 open at exit.
@@ -23,11 +23,11 @@ krissnnaa@krissnnaa-Inspiron-5559:~$ valgrind --tool=memcheck --leak-check=yes -
 ==4247== 
 ==4247== 16 bytes in 1 blocks are definitely lost in loss record 1 of 2
 ==4247==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==4247==    by 0x40059F: main (first.c:15)
+==4247==    by 0x40059F: main (Basic_for_valgrind.c:15)
 ==4247== 
 ==4247== 19 bytes in 1 blocks are definitely lost in loss record 2 of 2
 ==4247==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==4247==    by 0x400577: main (first.c:8)
+==4247==    by 0x400577: main (Basic_for_valgrind.c:8)
 ==4247== 
 ==4247== LEAK SUMMARY:
 ==4247==    definitely lost: 35 bytes in 2 blocks
